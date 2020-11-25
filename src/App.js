@@ -22,8 +22,7 @@ class App extends Component{
       <div className="App">
         {
           this.state.pokemon.map(pokemon => (
-            console.log(pokemon)
-            // <h1 key = {pokemon.}
+             <h1 key = {pokemon.name}> {pokemon.name}</h1>
           ))
         }
       </div>
