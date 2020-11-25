@@ -6,9 +6,11 @@ export const Card = (props) => (
     <div className = 'card-container'>
     <img
         alt = 'pokemon'
-        src = {'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png'}
+        src = {`https://pokeres.bastionbot.org/images/pokemon/${props.pokemon.id}.png`}
+        className = 'card-image'
+        
     />
-    <h1 key = {props.pokemon.id}> {props.pokemon.name}</h1>
+    <h1> {props.pokemon.name}</h1>
     </div>
-)
+);
     

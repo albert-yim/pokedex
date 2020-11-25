@@ -28,26 +28,12 @@ class App extends Component{
     .then(response => response.json())
     .then(dataParsing => dataParsing.results)
     .then(data => data.map(d => this.dataParsing(d))  )
-
-    // this.state.temp.map( temp => (
-    //   fetch(temp.url)
-    //   .then(response => response.json())
-    //   .then(data => console.log(data))
-    //   // .then(data => this.setState({ 
-    //   //   pokemon: [this.state.pokemon, {
-    //   //     name: temp.name
-    //   //   }], 
-    //   // }))
-    // ))
-    
   }
 
   render() {
-    this.state.pokemon.map(poke => {console.log(poke)})
     return (
       <div className="App">
-        hello
-          // <CardList pokemon = {this.state.pokemon}/>        
+        <CardList pokemon = {this.state.pokemon}/>        
       </div>
     );
   }
