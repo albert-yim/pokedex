@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
+import {CardList} from './component/card-list/card-list.component';
 
 class App extends Component{
   constructor() {
@@ -20,11 +21,11 @@ class App extends Component{
   render() {
     return (
       <div className="App">
-        {
-          this.state.pokemon.map(pokemon => (
-             <h1 key = {pokemon.name}> {pokemon.name}</h1>
-          ))
-        }
+          <CardList name ='Albert'>
+            {this.state.pokemon.map(pokemon => (
+                <h1 key = {pokemon.name}> {pokemon.name}</h1>
+              ))}
+          </CardList>
       </div>
     );
   }
